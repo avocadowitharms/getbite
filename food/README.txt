@@ -1,0 +1,1 @@
+Food illustration assets used by the Bite landing page.

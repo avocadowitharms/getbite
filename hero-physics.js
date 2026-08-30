@@ -1,7 +1,92 @@
 (() => {
   const foodFiles=['apple.png','avocado.png','banana.png','burger.png','cake.png','carrot.png','chocolate.png','coffee.png','cookie.png','donut.png','pizza.png','popsicle.png','salad.png','strawberry.png','sushi.png'];
 
+  function addLinework(){
+    if(document.getElementById('bite-linework'))return;
+    const style=document.createElement('style');
+    style.id='bite-linework';
+    style.textContent=`
+      .hero.physics-hero{
+        border:2px solid #11110f!important;
+        box-shadow:7px 8px 0 #11110f!important;
+        border-radius:34px!important;
+      }
+      .button{
+        border:2px solid #11110f!important;
+      }
+      .button:hover{
+        box-shadow:3px 4px 0 #11110f!important;
+      }
+      .system-step{
+        border:2px solid #11110f!important;
+        box-shadow:4px 5px 0 #11110f!important;
+      }
+      .step-number{
+        border:1.5px solid #11110f!important;
+        background:#fffefa!important;
+        color:#11110f!important;
+      }
+      .mini-editor,.bite-result,.range-demo{
+        border:2px solid #11110f!important;
+      }
+      .range-track{
+        outline:1.5px solid #11110f;
+        outline-offset:-1px;
+      }
+      .flex-chip,.flex-pill{
+        border:1.5px solid #11110f!important;
+        background:#fffefa!important;
+      }
+      .editor-showcase{
+        border:2px solid #11110f!important;
+        box-shadow:6px 7px 0 #11110f!important;
+      }
+      .editor-plate{
+        box-shadow:4px 5px 0 #11110f!important;
+      }
+      .flex-section{
+        border:2px solid #11110f!important;
+        box-shadow:6px 7px 0 #11110f!important;
+      }
+      .feature-grid article{
+        border:2px solid #11110f!important;
+        box-shadow:3px 4px 0 #11110f!important;
+      }
+      .feature-icon{
+        border:1.5px solid #11110f!important;
+      }
+      .goals-section{
+        border:2px solid #11110f!important;
+        box-shadow:6px 7px 0 #11110f!important;
+      }
+      .goal-visual{
+        border:2px solid #11110f!important;
+        box-shadow:3px 4px 0 #11110f!important;
+      }
+      .privacy-preview{
+        border:2px solid #11110f!important;
+        box-shadow:5px 6px 0 #11110f!important;
+      }
+      .privacy-badges span{
+        border:1.5px solid #11110f!important;
+        background:#fffefa!important;
+        color:#11110f!important;
+      }
+      .cta-mark img{
+        outline:2px solid #11110f;
+        outline-offset:2px;
+      }
+      @media(max-width:680px){
+        .hero.physics-hero{box-shadow:4px 5px 0 #11110f!important}
+        .system-step,.feature-grid article{box-shadow:3px 3px 0 #11110f!important}
+        .editor-showcase,.flex-section,.goals-section,.privacy-preview{box-shadow:4px 4px 0 #11110f!important}
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   function init(){
+    addLinework();
     const hero=document.querySelector('[data-physics-hero]');
     const field=document.querySelector('[data-food-field]');
     const hint=document.querySelector('[data-scroll-hint]');

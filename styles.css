@@ -149,3 +149,28 @@ footer{padding:25px 0;align-items:flex-start;gap:24px}
 footer div{display:grid;grid-template-columns:1fr 1fr;gap:10px 23px}
 .legal{margin:48px auto 80px}
 }
+
+/* Bite linework: intentionally bold, playful outlines layered over the minimal layout. */
+.hero.physics-hero{border:2px solid #11110f!important;box-shadow:7px 8px 0 #11110f!important}
+.button{border:2px solid #11110f!important}
+.button:hover{box-shadow:3px 4px 0 #11110f!important}
+.system-step{border:2px solid #11110f!important;box-shadow:4px 5px 0 #11110f!important}
+.step-number{border:1.5px solid #11110f!important;background:#fffefa!important;color:#11110f!important}
+.mini-editor,.bite-result,.range-demo{border:2px solid #11110f!important}
+.range-track{outline:1.5px solid #11110f!important;outline-offset:-1px}
+.flex-chip,.flex-pill{border:1.5px solid #11110f!important;background:#fffefa!important}
+.editor-showcase{border:2px solid #11110f!important;box-shadow:6px 7px 0 #11110f!important}
+.editor-plate{box-shadow:4px 5px 0 #11110f!important}
+.flex-section{border:2px solid #11110f!important;box-shadow:6px 7px 0 #11110f!important}
+.feature-grid article{border:2px solid #11110f!important;box-shadow:3px 4px 0 #11110f!important}
+.feature-icon{border:1.5px solid #11110f!important}
+.goals-section{border:2px solid #11110f!important;box-shadow:6px 7px 0 #11110f!important}
+.goal-visual{border:2px solid #11110f!important;box-shadow:3px 4px 0 #11110f!important}
+.privacy-preview{border:2px solid #11110f!important;box-shadow:5px 6px 0 #11110f!important}
+.privacy-badges span{border:1.5px solid #11110f!important;background:#fffefa!important;color:#11110f!important}
+.cta-mark img{outline:2px solid #11110f!important;outline-offset:2px}
+@media(max-width:680px){
+.hero.physics-hero{box-shadow:4px 5px 0 #11110f!important}
+.system-step,.feature-grid article{box-shadow:3px 3px 0 #11110f!important}
+.editor-showcase,.flex-section,.goals-section,.privacy-preview{box-shadow:4px 4px 0 #11110f!important}
+}

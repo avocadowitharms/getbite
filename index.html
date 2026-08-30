@@ -8,124 +8,38 @@
   <link rel="icon" href="assets/bite_icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    :root{
-      --bite-cream:#f8f7f2;
-      --bite-card:#fffefa;
-      --bite-ink:#11110f;
-      --bite-muted:#72716b;
-      --bite-line:#deddd6;
-      --bite-yellow:#f1e8bd;
-      --bite-peach:#efd7ca;
-      --bite-mint:#dfe9d9;
-      --bite-lilac:#e5dfeb;
-    }
-    body{background:var(--bite-cream);color:var(--bite-ink)}
-    nav{height:74px}
-    nav .brand{font-size:22px;letter-spacing:-.8px}
-    nav .brand img{width:30px!important;height:30px!important;border-radius:8px!important}
-    .nav-links>a:not(.button){font-size:13px;color:#4f4e49}
-    .button{border:1px solid var(--bite-ink);box-shadow:none;padding:12px 20px}
-    .button:hover{box-shadow:none;transform:translateY(-1px)}
-
-    .hero.physics-hero{position:relative;display:block;width:min(1240px,calc(100% - 28px));min-height:740px;margin:10px auto 118px;padding:0;overflow:hidden;background:var(--bite-card);border:1px solid var(--bite-line);border-radius:34px;box-shadow:none;isolation:isolate}
-    .hero-center{position:relative;z-index:5;min-height:640px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:74px 26px 185px;pointer-events:none}
-    .hero-brand-lockup{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:30px}
-    .hero-brand-lockup img{width:58px;height:58px;display:block;border-radius:15px}
-    .hero-name{margin:0;font-size:clamp(68px,10vw,132px);line-height:.84;letter-spacing:-.078em;font-weight:880}
-    .physics-hero h1{max-width:800px;margin:0;font-size:clamp(42px,5.7vw,72px);line-height:.96;letter-spacing:-.058em;font-weight:820}
-    .physics-hero .lead{max-width:610px;margin:24px auto 0;color:var(--bite-muted);font-size:18px;line-height:1.55}
-    .physics-hero .actions{pointer-events:auto;justify-content:center;gap:18px;margin-top:30px}
-    .physics-hero .text-link{font-size:14px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+    .hero.physics-hero{position:relative;display:block;min-height:720px;padding:0;overflow:hidden;background:#f6f6f6;isolation:isolate}
+    .hero-center{position:relative;z-index:5;min-height:620px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 26px 170px;pointer-events:none}
+    .hero-brand-lockup{display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+    .hero-name{margin:0;font-size:clamp(72px,12vw,160px);line-height:.82;letter-spacing:-.085em;font-weight:900}
+    .physics-hero h1{max-width:820px;margin:0;font-size:clamp(42px,6vw,76px);line-height:.94;letter-spacing:-.064em}
+    .physics-hero .lead{max-width:620px;margin:24px auto 0;font-size:19px}
+    .physics-hero .actions{pointer-events:auto;justify-content:center}
     .hero-food-field{position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none}
-    .falling-food{position:absolute;left:0;top:0;display:block;object-fit:contain;will-change:transform,opacity;filter:drop-shadow(0 5px 8px rgba(0,0,0,.08));user-select:none}
-    .hero-floor-fade{position:absolute;left:0;right:0;bottom:0;z-index:4;height:90px;background:linear-gradient(to bottom,rgba(255,254,250,0),rgba(255,254,250,.94) 86%,var(--bite-card));pointer-events:none}
-    .scroll-hint{position:absolute;z-index:6;left:50%;bottom:18px;transform:translateX(-50%);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#8b8980;transition:opacity .25s ease;white-space:nowrap}
-
-    .intro{width:min(700px,calc(100% - 40px));margin:0 auto 52px;text-align:center}
-    .intro .eyebrow,.section-copy .eyebrow,.flex-section .eyebrow,.features-section>.eyebrow,.goals-section .eyebrow,.privacy-preview .eyebrow,.final-cta .eyebrow{color:#7b7971}
-    .intro h2,.section-copy h2,.flex-section h2,.goals-section h2,.privacy-preview h2,.final-cta h2{font-size:clamp(38px,5vw,60px);letter-spacing:-.052em}
-
-    .system-graphic{width:min(1120px,calc(100% - 40px));gap:14px;grid-template-columns:1fr 28px 1fr 28px 1fr}
-    .system-step{padding:20px;border:1px solid var(--bite-line);border-radius:24px;background:var(--bite-card);box-shadow:none}
-    .system-step h3{margin:18px 0 6px;font-size:20px}
-    .system-step p{font-size:14px;line-height:1.55}
-    .step-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#f0efe9;color:#55534d;font-size:10px}
-    .flow-arrow{font-size:20px;color:#99968d}
-    .mini-editor,.bite-result,.range-demo{height:160px;margin-top:14px;border:none;border-radius:18px}
-    .mini-editor{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--bite-mint);overflow:hidden}
-    .mini-editor img{width:70px;height:70px;object-fit:contain;filter:drop-shadow(0 3px 3px rgba(0,0,0,.07))}
-    .bite-result{background:var(--bite-lilac);border:none}
-    .range-demo{background:#f0efe9}
-    .range-zone{background:#beb4c8}
-    .range-position{border:2px solid var(--bite-ink);background:#fff}
-
-    .editor-feature,.goals-section{width:min(1120px,calc(100% - 40px));margin:110px auto;gap:80px}
-    .editor-showcase{max-width:440px;border:1px solid var(--bite-line);border-radius:28px;background:var(--bite-card);box-shadow:none}
-    .editor-canvas{height:290px;background:var(--bite-yellow)}
-    .editor-plate{width:230px;height:230px;border:12px solid #fff;background:#f4f1e8;box-shadow:0 8px 22px rgba(0,0,0,.05)}
-    .real-food{position:absolute;object-fit:contain;filter:drop-shadow(0 4px 4px rgba(0,0,0,.09))}
-    .real-food.a{width:88px;left:24px;top:26px;transform:rotate(-12deg)}
-    .real-food.b{width:82px;right:22px;top:24px;transform:rotate(8deg)}
-    .real-food.c{width:88px;right:24px;bottom:25px;transform:rotate(5deg)}
-    .real-food.d{width:78px;left:28px;bottom:27px;transform:rotate(-8deg)}
-    .editor-drawer{background:#fffefa}
-    .editor-drawer div{border-top:1px solid #ebe9e2}
-
-    .flex-section{width:min(1120px,calc(100% - 40px));margin:0 auto 110px;padding:54px 58px;gap:70px;border:0;border-radius:30px;background:var(--bite-peach);box-shadow:none}
-    .flex-copy{font-size:17px;color:#4d4b46}
-    .flex-pill{display:inline-flex;margin-top:14px;padding:8px 11px;border:1px solid rgba(17,17,15,.18);border-radius:999px;font-size:12px;font-weight:800;background:rgba(255,255,255,.42)}
-
-    .features-section{width:min(1120px,calc(100% - 40px));margin:0 auto 110px}
-    .feature-grid{grid-template-columns:repeat(4,1fr);gap:12px}
-    .feature-grid article{padding:24px;border:1px solid var(--bite-line);border-radius:22px;background:var(--bite-card)}
-    .feature-icon{width:46px;height:46px;border:0;border-radius:14px;background:var(--bite-yellow);font-size:0;overflow:hidden}
-    .feature-icon img{width:32px;height:32px;object-fit:contain}
-    .feature-grid article:nth-child(2) .feature-icon{background:var(--bite-lilac)}
-    .feature-grid article:nth-child(3) .feature-icon{background:var(--bite-mint)}
-    .feature-grid article:nth-child(4) .feature-icon{background:var(--bite-peach)}
-    .feature-grid h3{font-size:19px}
-    .feature-grid p{font-size:14px;line-height:1.55}
-
-    .goals-section{padding:54px 58px;border:0;border-radius:30px;background:var(--bite-lilac);box-shadow:none}
-    .goal-visual{padding:22px;border:0;border-radius:22px;background:rgba(255,255,255,.72);box-shadow:none}
-    .goal-visual i{background:linear-gradient(90deg,#e9d6cd,#ebe7c9,#dce8d7)}
-    .goal-visual i:after{border:2px solid var(--bite-ink)}
-
-    .privacy-preview{width:min(1120px,calc(100% - 40px));margin:0 auto 105px;padding:50px 54px;border:1px solid var(--bite-line);border-radius:28px;background:var(--bite-card)}
-    .privacy-preview h2{max-width:620px}
-    .privacy-preview>p:not(.eyebrow){max-width:680px}
-    .privacy-badges{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
-    .privacy-badges span{padding:7px 10px;border-radius:999px;background:#f0efe9;color:#55534e;font-size:12px;font-weight:750}
-
-    .final-cta{width:min(860px,calc(100% - 40px));margin:0 auto 105px;text-align:center}
-    .cta-mark{width:68px;height:68px;margin:0 auto 22px;border:0;border-radius:18px;background:transparent;box-shadow:none}
-    .cta-mark img{width:68px!important;height:68px!important;border-radius:17px!important}
-    footer{min-height:96px}
-
-    @media(max-width:900px){
-      .system-graphic{grid-template-columns:1fr}.flow-arrow{height:32px;transform:rotate(90deg)}
-      .editor-feature,.goals-section{grid-template-columns:1fr;gap:38px}.editor-showcase{margin:auto}.feature-grid{grid-template-columns:1fr 1fr}
-    }
-    @media(max-width:680px){
-      .hero.physics-hero{min-height:660px;width:calc(100% - 18px);border-radius:26px;margin-top:4px}
-      .hero-center{min-height:580px;padding:48px 18px 160px}.hero-brand-lockup{gap:10px;margin-bottom:24px}.hero-brand-lockup img{width:48px;height:48px;border-radius:12px}.hero-name{font-size:70px}.physics-hero h1{font-size:41px}.physics-hero .lead{font-size:16px}.physics-hero .actions{gap:14px;flex-wrap:wrap}.falling-food{max-width:88px}.scroll-hint{bottom:12px}
-      .flex-section,.goals-section,.privacy-preview{padding:34px 26px}.feature-grid{grid-template-columns:1fr}.editor-feature,.goals-section{margin:82px auto}.features-section,.flex-section{margin-bottom:82px}
-    }
+    .falling-food{position:absolute;left:0;top:0;display:block;object-fit:contain;will-change:transform,opacity;filter:drop-shadow(0 3px 0 rgba(0,0,0,.08));user-select:none}
+    .hero-floor-fade{position:absolute;left:0;right:0;bottom:0;z-index:4;height:84px;background:linear-gradient(to bottom,rgba(246,246,246,0),rgba(246,246,246,.94) 82%,#f6f6f6);pointer-events:none}
+    .scroll-hint{position:absolute;z-index:6;left:50%;bottom:20px;transform:translateX(-50%);font-size:11px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#666;transition:opacity .25s ease;white-space:nowrap}
+    .brand img{border-radius:9px}
+    .mini-food{border:0!important;background-color:transparent!important;background-repeat:no-repeat!important;background-position:center!important;background-size:contain!important;filter:grayscale(1) contrast(1.08)}
+    .mini-food.food-a{width:48px!important;height:48px!important;left:5px!important;top:14px!important;border-radius:0!important;background-image:url('assets/avocado.png')!important}
+    .mini-food.food-b{width:45px!important;height:45px!important;right:4px!important;top:8px!important;border-radius:0!important;background-image:url('assets/coffee.png')!important}
+    .mini-food.food-c{width:52px!important;height:52px!important;right:7px!important;bottom:4px!important;border-radius:0!important;background-image:url('assets/strawberry.png')!important}
+    @media(max-width:680px){.hero.physics-hero{min-height:640px}.hero-center{min-height:565px;padding:52px 20px 150px}.hero-brand-lockup{margin-bottom:24px}.hero-name{font-size:70px}.physics-hero .lead{font-size:16px}.falling-food{max-width:90px}.scroll-hint{bottom:14px}}
     @media(prefers-reduced-motion:reduce){.scroll-hint{display:none}.falling-food{transition:none!important}}
   </style>
 </head>
 <body>
   <nav>
-    <a class="brand" href="./" aria-label="Bite home" style="display:flex;align-items:center;gap:9px"><img src="assets/bite_icon.png" alt="" aria-hidden="true" style="display:block">Bite</a>
+    <a class="brand" href="./" aria-label="Bite home" style="display:flex;align-items:center;gap:10px"><img src="assets/bite_icon.png" alt="" aria-hidden="true" style="width:34px;height:34px;display:block">Bite</a>
     <div class="nav-links"><a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="support.html">Support</a><a class="button small" href="#get-bite">Get Bite</a></div>
   </nav>
   <main>
     <section class="hero physics-hero" data-physics-hero>
       <div class="hero-center">
-        <div class="hero-brand-lockup"><img src="assets/bite_icon.png" alt="Bite app icon"><p class="hero-name">Bite.</p></div>
+        <div class="hero-brand-lockup"><p class="hero-name">Bite.</p></div>
         <h1>Food tracking, without chasing an exact number.</h1>
         <p class="lead">Build your meals, track your Bites, and aim for a flexible daily range shaped around your goal.</p>
-        <div class="actions"><a class="button" href="#get-bite">Get Bite</a><a class="text-link" href="#how-it-works">See how it works ↓</a></div>
+        <div class="actions"><a class="button" href="#get-bite">Get Bite</a><a class="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a></div>
       </div>
       <div class="hero-food-field" data-food-field aria-hidden="true"></div>
       <div class="hero-floor-fade"></div>
@@ -133,48 +47,27 @@
     </section>
 
     <section id="how-it-works" class="intro">
-      <p class="eyebrow">How Bite works</p>
-      <h2>Build it. Bite it. Move on.</h2>
+      <p class="eyebrow">How Bite works</p><h2>One simple rhythm for your day.</h2>
       <p>You build what you ate. Bite turns it into one simple value. Across the day, you aim to land somewhere inside your personal range.</p>
     </section>
-
     <section class="system-graphic" aria-label="Build a meal, get a Bite value, and land in your daily range">
-      <article class="system-step">
-        <span class="step-number">01</span>
-        <div class="mini-editor" aria-hidden="true"><img src="assets/avocado.png" alt=""><img src="assets/coffee.png" alt=""><img src="assets/strawberry.png" alt=""></div>
-        <h3>Build what you ate</h3><p>Add foods and portions using Bite’s visual meal editor.</p>
-      </article>
+      <article class="system-step editor-step"><span class="step-number">01</span><div class="mini-editor" aria-hidden="true"><div class="mini-plate"><i class="mini-food food-a"></i><i class="mini-food food-b"></i><i class="mini-food food-c"></i></div><div class="ingredient-pills"><span>Avocado</span><span>Egg</span><span>Toast</span></div></div><h3>Build what you ate</h3><p>Add foods and portions using Bite’s visual meal editor.</p></article>
       <div class="flow-arrow" aria-hidden="true">→</div>
-      <article class="system-step"><span class="step-number">02</span><div class="bite-result" aria-hidden="true"><span>Lunch</span><strong>7</strong><small>Bites</small></div><h3>Get a Bite value</h3><p>Nutrition becomes one simpler number without hiding the details from you.</p></article>
+      <article class="system-step value-step"><span class="step-number">02</span><div class="bite-result" aria-hidden="true"><span>Lunch</span><strong>7</strong><small>Bites</small></div><h3>Get a Bite value</h3><p>Bite turns the meal into one simple value based on its nutritional profile.</p></article>
       <div class="flow-arrow" aria-hidden="true">→</div>
-      <article class="system-step"><span class="step-number">03</span><div class="range-demo" aria-hidden="true"><span class="range-title">Today’s range</span><strong>22–28 Bites</strong><div class="range-track"><i class="range-zone"></i><i class="range-position"></i></div><div class="range-labels"><span>0</span><span>22</span><span>28</span></div><div class="flex-chip">Weekly Flex <b>18</b></div></div><h3>Land in your range</h3><p>Aim for somewhere inside your personal range, not one perfect number.</p></article>
+      <article class="system-step range-step"><span class="step-number">03</span><div class="range-demo" aria-hidden="true"><span class="range-title">Today’s range</span><strong>22–28 Bites</strong><div class="range-track"><i class="range-zone"></i><i class="range-position"></i></div><div class="range-labels"><span>0</span><span>22</span><span>28</span></div><div class="flex-chip">Weekly Flex <b>18</b></div></div><h3>Land in your range</h3><p>Aim to finish somewhere inside your personal range, not on one exact number.</p></article>
     </section>
-
     <section class="editor-feature">
-      <div class="editor-showcase" aria-label="Example visual meal editor">
-        <div class="editor-toolbar"><span>Cancel</span><b>Lunch</b><span>Done</span></div>
-        <div class="editor-canvas"><div class="editor-plate"><img class="real-food a" src="assets/avocado.png" alt=""><img class="real-food b" src="assets/strawberry.png" alt=""><img class="real-food c" src="assets/sushi.png" alt=""><img class="real-food d" src="assets/carrot.png" alt=""></div></div>
-        <div class="editor-drawer"><span class="drawer-handle"></span><p>Ingredients</p><div><span>Avocado</span><b>2 Bites</b></div><div><span>Sushi</span><b>3 Bites</b></div><div><span>Strawberries</span><b>1 Bite</b></div></div>
-      </div>
-      <div class="section-copy"><p class="eyebrow">The Bite editor</p><h2>Build it like you ate it.</h2><p>Choose ingredients, adjust portions and put your meal together visually. Food tracking feels more like assembling a meal than filling out a form.</p></div>
+      <div class="editor-showcase" aria-label="Example visual meal editor"><div class="editor-toolbar"><span>Cancel</span><b>Lunch</b><span>Done</span></div><div class="editor-canvas"><div class="editor-plate"><i class="editor-food ef-one"></i><i class="editor-food ef-two"></i><i class="editor-food ef-three"></i><i class="editor-food ef-four"></i></div></div><div class="editor-drawer"><span class="drawer-handle"></span><p>Ingredients</p><div><span>Avocado</span><b>2 Bites</b></div><div><span>Egg</span><b>2 Bites</b></div><div><span>Sourdough toast</span><b>3 Bites</b></div></div></div>
+      <div class="section-copy"><p class="eyebrow">The Bite editor</p><h2>Build it like you ate it.</h2><p>Choose ingredients from the food library, adjust portions, and put your meal together visually. Organize it as Breakfast, Lunch, Dinner, or Snacks.</p></div>
     </section>
-
-    <section class="flex-section"><div><p class="eyebrow">Flexible by design</p><h2>Real days are not identical.</h2></div><div class="flex-copy"><p>Your daily range gives you room to land somewhere sensible instead of chasing one exact number.</p><p>Weekly Flex adds breathing room when one day looks different from the next.</p><span class="flex-pill">A guide, not a ceiling</span></div></section>
-
-    <section id="features" class="features-section"><p class="eyebrow">What’s in Bite</p><div class="feature-grid">
-      <article><span class="feature-icon"><img src="assets/avocado.png" alt=""></span><h3>Visual meal editor</h3><p>Build meals from actual food illustrations instead of using a spreadsheet-like diary.</p></article>
-      <article><span class="feature-icon"><img src="assets/donut.png" alt=""></span><h3>Daily range + Flex</h3><p>A personalized range guides your day while Flex leaves room for normal variation.</p></article>
-      <article><span class="feature-icon"><img src="assets/coffee.png" alt=""></span><h3>Search + barcode</h3><p>Find foods from the library or scan packaged products when that is faster.</p></article>
-      <article><span class="feature-icon"><img src="assets/strawberry.png" alt=""></span><h3>Nutrition when you want it</h3><p>Energy and nutrients stay available without dominating the experience.</p></article>
-    </div></section>
-
-    <section class="goals-section"><div><p class="eyebrow">Made for your goal</p><h2>Lose, maintain, or gain.</h2><p>Your Bite Range is shaped around your profile, activity and the direction you choose. The goal changes the guidance, not the personality of the app.</p></div><div class="goal-visual" aria-label="Bite supports losing, maintaining, and gaining weight"><span>Lose</span><span class="active">Maintain</span><span>Gain</span><i></i><b>Your range adapts</b></div></section>
-
-    <section class="privacy-preview"><p class="eyebrow">Private by design</p><h2>Your food story stays yours.</h2><p>Bite is local-first and does not require a Bite account. Your food data, profile, settings and history stay on your device unless you choose an optional connected feature.</p><div class="privacy-badges"><span>No Bite account</span><span>Local-first</span><span>No advertising</span></div><a class="text-link" href="privacy.html">Read the Privacy Policy →</a></section>
-
-    <section id="get-bite" class="final-cta"><div class="cta-mark"><img src="assets/bite_icon.png" alt="Bite app icon"></div><p class="eyebrow">Ready when you are</p><h2>Make food tracking feel lighter.</h2><p>Build your meals. Follow your range. Leave room for real life.</p><a class="button" href="mailto:avocadowitharms@gmail.com?subject=Get%20Bite">Get Bite</a></section>
+    <section class="flex-section"><div><p class="eyebrow">Flexible by design</p><h2>Your days don’t have to look the same.</h2></div><div class="flex-copy"><p>Finish within your daily range and you’re broadly on target. If a day lands a little above it, weekly Flex provides breathing room across the week.</p><p>The range is a flexible guide, not a strict ceiling, and not an invitation to eat as little as possible.</p></div></section>
+    <section id="features" class="features-section"><p class="eyebrow">What’s in Bite</p><div class="feature-grid"><article><span class="feature-icon">▦</span><h3>Visual meal editor</h3><p>Build meals from foods and ingredients instead of filling out a spreadsheet-like log.</p></article><article><span class="feature-icon">⌁</span><h3>Daily range + Flex</h3><p>A personalized Bite range guides each day, with extra room available across the week.</p></article><article><span class="feature-icon">▥</span><h3>Barcode scanning</h3><p>Scan packaged foods to look up product nutrition instead of entering every detail manually.</p></article><article><span class="feature-icon">◌</span><h3>Nutrition when you want it</h3><p>Nutrition informs each Bite value and stays available without dominating the experience.</p></article></div></section>
+    <section class="goals-section"><div><p class="eyebrow">Made for your goal</p><h2>Lose, maintain, or gain.</h2><p>Your daily Bite range is personalized around your profile and the direction you choose. Set a weight goal, follow your progress, and adjust as life changes.</p></div><div class="goal-visual" aria-label="Bite supports losing, maintaining, and gaining weight"><span>Lose</span><span class="active">Maintain</span><span>Gain</span><i></i><b>Your range adapts</b></div></section>
+    <section class="privacy-preview"><p class="eyebrow">Private by default</p><h2>Your food story stays yours.</h2><p>Bite is local-first: your food data, profile, settings, and history are stored on your device. Bite does not run an account server.</p><a class="text-link" href="privacy.html">Read the Privacy Policy <span aria-hidden="true">→</span></a></section>
+    <section id="get-bite" class="final-cta"><div class="cta-mark"><img src="assets/bite_icon.png" alt="Bite app icon" style="width:48px;height:48px;display:block;border-radius:12px"></div><p class="eyebrow">Ready when you are</p><h2>Make food tracking feel lighter.</h2><p>Build your meals. Follow your range. Leave room for real life.</p><a class="button" href="mailto:avocadowitharms@gmail.com?subject=Get%20Bite">Get Bite</a></section>
   </main>
   <footer><span>© 2026 <a href="https://gugus.software/">gugus. Software&amp;Things</a>. All rights reserved.</span><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms &amp; Legal</a><a href="support.html">Support</a><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">EULA</a></div></footer>
-  <script src="hero-physics.js?v=20260830-4"></script>
+  <script src="hero-physics.js?v=20260830-3"></script>
 </body>
 </html>

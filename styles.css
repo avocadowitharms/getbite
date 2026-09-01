@@ -109,6 +109,10 @@ nav{height:82px}
 .final-cta{width:min(900px,calc(100% - 40px));margin:0 auto 110px;text-align:center}
 .cta-mark{width:72px;height:72px;margin:0 auto 24px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;background:var(--sun);box-shadow:3px 4px 0 var(--ink);font-size:57px;line-height:1}
 .final-cta>p:not(.eyebrow){margin:18px auto 28px}
+.google-play-link{display:inline-flex;border-radius:12px;transition:transform .2s ease,filter .2s ease}
+.google-play-link:hover{transform:translateY(-2px);filter:drop-shadow(3px 4px 0 rgba(17,17,15,.24))}
+.google-play-link:focus-visible{outline:3px solid var(--ink);outline-offset:5px}
+.google-play-link img{display:block;width:216px;height:auto}
 footer{min-height:108px;border-top:1px solid var(--line);font-size:14px}
 footer>span{color:var(--muted)}
 .legal{width:min(780px,calc(100% - 40px));margin:70px auto 112px}

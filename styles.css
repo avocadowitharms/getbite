@@ -51,3 +51,17 @@ a{color:inherit;text-decoration:none}button,summary{-webkit-tap-highlight-color:
 
 .wordmark{display:inline-flex;align-items:center;gap:5px}.brand-icon{width:48px;height:48px;object-fit:contain;flex:none}
 @media(max-width:600px){.brand-icon{width:40px;height:40px}}
+
+/* Supplied screenshots include their own device frames and transparent side margins. */
+.device.real-device{border:0;outline:0;border-radius:0;background:transparent;box-shadow:none;aspect-ratio:0.46;overflow:hidden}
+.device.real-device>img{width:100%;height:100%;object-fit:cover;max-width:none}
+.real-meals{height:590px}.real-meals .device{position:absolute;width:250px}.real-meals .meal-back{left:0;top:35px}.real-meals .meal-front{right:0;top:0}
+.recommendation-showcase .deck{height:650px;max-width:299px}
+.recommendation-card.screen-card{border:0;border-radius:0;background:transparent;box-shadow:none}
+.recommendation-card.screen-card>img{width:100%;height:100%;margin:0;border-radius:0;object-fit:cover}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+
+
+@media(max-width:1100px){.real-meals .device{width:220px}.real-meals{height:535px}}
+@media(max-width:800px){.recommendation-showcase .deck{height:565px;max-width:260px}.real-meals .device{width:200px}.real-meals{height:485px}}
+@media(max-width:600px){.real-meals{height:520px;margin-top:35px}.real-meals .device{width:210px}.real-meals .meal-back{left:-20px;top:30px}.real-meals .meal-front{right:-8px;top:0}.recommendation-showcase .deck{height:auto;aspect-ratio:0.46;width:100%;max-width:290px}}

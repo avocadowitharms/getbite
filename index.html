@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://www.getbitten.app/">
   <title>Bite. — Learn. Cook. Find your way.</title>
   <link rel="canonical" href="https://www.getbitten.app/">
-  <link rel="icon" href="assets/IconFree.png" type="image/png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/Inter.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
@@ -43,8 +43,8 @@
         <div class="hero-actions"><a class="google-play-badge" href="https://play.google.com/store/apps/details?id=com.avocadowitharms.bite"><img src="assets/google-play-badge.png" width="180" height="70" alt="Get it on Google Play"></a><span class="platform"><svg class="icon" aria-hidden="true"><use href="#phone"/></svg>Available on Android.</span></div>
       </div>
       <div class="hero-visual">
-        <div class="device hero-today"><img src="assets/placeholders/today.svg" width="360" height="740" alt="Placeholder for the Bite Today screen" fetchpriority="high"></div>
-        <div class="device hero-cook"><img src="assets/placeholders/cook.svg" width="360" height="740" alt="Placeholder for the Bite Cook Mode screen"></div>
+        <div class="device real-device hero-today"><img src="assets/today.png" width="1016" height="1270" alt="Bite Today showing calories, a personal daily range and Weekly Flex" fetchpriority="high"></div>
+        <div class="device real-device hero-cook"><img src="assets/cooktimer.png" width="2048" height="2560" alt="Bite Cook Mode with a running pasta timer"></div>
         <span class="visual-caption">A little perspective.<br>A lot less pressure.</span>
       </div>
     </section>
@@ -57,9 +57,9 @@
     </section>
     <section class="meals wrap section-space" id="recipes" aria-labelledby="meals-title">
       <div class="section-copy"><p class="eyebrow">Real food. Real life.</p><h2 id="meals-title">Meals,<br>not databases.</h2><p>Bite focuses on learning, cooking, and choices that work for you, with less obsession over numbers. Find a meal, make it your own, and save it for next time.</p><a class="text-link" href="#recommendations">Find your next meal <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
-      <div class="meal-composition" aria-label="Example meal cards with image placeholders">
-        <article class="meal-card meal-back"><img src="assets/placeholders/meal.svg" width="400" height="320" alt="Recipe image placeholder" loading="lazy"><div><span class="eyebrow">Something simple</span><h3>Pasta al Pomodoro</h3><span class="pill">6 Bites</span></div></article>
-        <article class="meal-card meal-front"><img src="assets/placeholders/meal.svg" width="400" height="320" alt="Recipe image placeholder" loading="lazy"><div><span class="eyebrow">A little bit of everything</span><h3>Roasted Veggie Bowl</h3><span class="pill">6 Bites</span><span class="meal-time">25 min</span></div></article>
+      <div class="meal-composition real-meals" aria-label="Bite recipe gallery and Pizza Margherita recipe">
+        <div class="device real-device meal-back"><img src="assets/gallery.png" width="2048" height="2560" alt="Browse meals in the Bite recipe gallery" loading="lazy"></div>
+        <div class="device real-device meal-front"><img src="assets/pizzarecipt.png" width="2048" height="2560" alt="Pizza Margherita recipe with Bite value, ingredients and cooking controls" loading="lazy"></div>
         <span class="composition-caption">Discover. Cook. Track. Repeat.</span>
       </div>
     </section>
@@ -67,23 +67,23 @@
       <div class="wrap recommendation-grid section-space">
         <div class="section-copy"><p class="eyebrow">AI recommendations</p><h2 id="recommendations-title">Food you’ll<br>actually want<br>to eat.</h2><p>Ideas that start with you. Your tastes, your goals, the time you have — and what fits your day.</p><div class="preference-tags" aria-label="Preferences used for recommendations"><span>Vegetarian</span><span>Vegan</span><span>Allergies</span><span>Dislikes</span><span>Your preferences</span></div><p class="small-copy">Dietary preferences, nutrition needs, meal type and your Bite Range help shape your recommendations. Your previous preferences add a personal touch.</p><p class="fine-print">AI-generated recipes use your configured AI provider.</p></div>
         <div class="recommendation-showcase">
-          <div class="deck" role="region" aria-label="Example recipe recommendations" aria-roledescription="carousel" tabindex="0">
-            <article class="recommendation-card" data-position="0" aria-label="1 of 3"><div class="card-top"><span class="eyebrow">For you</span><svg class="icon" aria-hidden="true"><use href="#bookmark"/></svg></div><img src="assets/placeholders/meal.svg" width="400" height="320" alt="Chickpea salad photo placeholder" loading="lazy" draggable="false"><div class="recommendation-body"><p class="eyebrow">Fresh. Simple. Satisfying.</p><h3>Chickpea Salad</h3><p>A little crunch. A lot to love.</p><div class="recipe-meta"><span class="pill">5 Bites</span><span>15 min</span><span>Vegetarian</span></div></div></article>
-            <article class="recommendation-card" data-position="1" aria-label="2 of 3" aria-hidden="true"><div class="card-top"><span class="eyebrow">For you</span><svg class="icon" aria-hidden="true"><use href="#bookmark"/></svg></div><img src="assets/placeholders/meal.svg" width="400" height="320" alt="Pasta al Pomodoro photo placeholder" loading="lazy" draggable="false"><div class="recommendation-body"><p class="eyebrow">An everyday favourite</p><h3>Pasta al Pomodoro</h3><p>A few ingredients. Something good.</p><div class="recipe-meta"><span class="pill">6 Bites</span><span>20 min</span><span>Vegetarian</span></div></div></article>
-            <article class="recommendation-card" data-position="2" aria-label="3 of 3" aria-hidden="true"><div class="card-top"><span class="eyebrow">For you</span><svg class="icon" aria-hidden="true"><use href="#bookmark"/></svg></div><img src="assets/placeholders/meal.svg" width="400" height="320" alt="Protein oats photo placeholder" loading="lazy" draggable="false"><div class="recommendation-body"><p class="eyebrow">Make mornings easier</p><h3>Protein Oats</h3><p>Your day, off to a simple start.</p><div class="recipe-meta"><span class="pill">4 Bites</span><span>10 min</span><span>Breakfast</span></div></div></article>
+          <div class="deck" role="region" aria-label="Bite recipe screens" aria-roledescription="carousel" tabindex="0">
+            <article class="recommendation-card screen-card" data-position="0" aria-label="1 of 3"><h3 class="sr-only">Ideas for you</h3><img src="assets/recommendation.png" width="2048" height="2560" alt="Bite recommendation deck showing Chicken Tikka Masala, 5 Bites and 40 minutes" loading="lazy" draggable="false"></article>
+            <article class="recommendation-card screen-card" data-position="1" aria-label="2 of 3" aria-hidden="true"><h3 class="sr-only">Pizza Margherita</h3><img src="assets/pizzarecipt.png" width="2048" height="2560" alt="Bite Pizza Margherita recipe with ingredients and servings" loading="lazy" draggable="false"></article>
+            <article class="recommendation-card screen-card" data-position="2" aria-label="3 of 3" aria-hidden="true"><h3 class="sr-only">Recipe details</h3><img src="assets/receiptDetail.png" width="2048" height="2560" alt="Bite tomato and basil pasta recipe with editable ingredients" loading="lazy" draggable="false"></article>
           </div>
-          <div class="deck-controls"><button class="circle-button" type="button" data-deck-step="-1" aria-label="Previous recommendation">←</button><span class="deck-status" aria-live="polite" aria-atomic="true">01 / 03 · Chickpea Salad</span><button class="circle-button" type="button" data-deck-step="1" aria-label="Next recommendation">→</button></div><p class="deck-hint">Swipe to find your kind of food.</p>
+          <div class="deck-controls"><button class="circle-button" type="button" data-deck-step="-1" aria-label="Previous recommendation">←</button><span class="deck-status" aria-live="polite" aria-atomic="true">01 / 03 · Ideas for you</span><button class="circle-button" type="button" data-deck-step="1" aria-label="Next recommendation">→</button></div><p class="deck-hint">Swipe to explore recipes in Bite.</p>
         </div>
       </div>
     </section>
     <section class="cook-section" id="cook-mode" aria-labelledby="cook-title">
       <div class="wrap cook-grid">
         <div class="section-copy"><p class="eyebrow">Cook Mode</p><h2 id="cook-title">Your kitchen<br>companion.</h2><p>From recipe to ready. One step at a time. Ingredients, previews and timers keep everything in reach while you cook.</p><div class="voice-note"><svg class="icon" aria-hidden="true"><use href="#sound"/></svg><span>“Hey Bite, next step.”</span></div><p class="small-copy voice-copy"><strong>Voice control · Coming soon</strong><br>Hands busy? Hands-free navigation is on its way.</p><a class="text-link" href="#get-bite">Meet your sous-chef <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
-        <div class="cook-visual"><div class="device"><img src="assets/placeholders/cook.svg" width="360" height="740" alt="Cook Mode screenshot placeholder showing space for the current step, ingredients and next step" loading="lazy"></div><div class="timer-fragment"><span class="eyebrow">Room to keep cooking</span><img src="assets/placeholders/timer.svg" width="220" height="240" alt="Floating cooking timer image placeholder" loading="lazy"><p>A full timer when you need it.<br>A small one when you don’t.</p></div></div>
+        <div class="cook-visual"><div class="device real-device"><img src="assets/cooktimer.png" width="2048" height="2560" alt="Bite Cook Mode showing the current recipe, running timer, and pause and stop controls" loading="lazy"></div><div class="timer-fragment"><span class="eyebrow">Room to keep cooking</span><p>A full timer when you need it.<br>A small one when you don’t.</p></div></div>
       </div>
     </section>
     <section class="editor-section wrap section-space" id="food-editor" aria-labelledby="editor-title">
-      <div class="editor-visual"><div class="device"><img src="assets/placeholders/editor.svg" width="360" height="740" alt="Bite meal editor screenshot placeholder" loading="lazy"></div><div class="editor-note"><span class="eyebrow">Make it yours</span><p>A little of this.<br>A bit more of that.</p><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></div></div>
+      <div class="editor-visual"><div class="device real-device"><img src="assets/receiptDetail.png" width="2048" height="2560" alt="Bite recipe detail with ingredients, editable servings and Cook Mode" loading="lazy"></div><div class="editor-note"><span class="eyebrow">Make it yours</span><p>A little of this.<br>A bit more of that.</p><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></div></div>
       <div class="section-copy"><p class="eyebrow">Food editor</p><h2 id="editor-title">Log any meal.<br>Your way.</h2><p>Create a meal in seconds. Add ingredients, adjust quantities and set your servings. Keep it simple, or add the details you care about.</p><p class="small-copy">Edit a recipe as you cook. Save it when you’re done. Your favourite meals are ready for next time.</p><a class="text-link" href="#collectibles">Good enough to keep <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
     </section>
     <section class="collectibles ruled" id="collectibles" aria-labelledby="collectibles-title">
@@ -94,7 +94,7 @@
             <article class="collectible-card collectible-front"><p class="eyebrow">Bite collectible</p><h3>Pizza Prosciutto e Funghi</h3><img src="assets/placeholders/meal.svg" width="400" height="320" alt="Pizza photo placeholder" loading="lazy"><span class="pill">15 Bites</span><p>Some meals are keepers.</p><div class="nutrition"><span><b>1,077</b>kcal</span><span><b>55</b>g protein</span><span><b>17</b>g fat</span><span><b>10</b>g sugar</span></div><small>Created with Bite</small></article>
             <article class="collectible-card collectible-right"><p class="eyebrow">Bite collectible</p><h3>Roasted Veggie Bowl</h3><img src="assets/placeholders/meal.svg" width="400" height="320" alt="Veggie bowl photo placeholder" loading="lazy"><span class="pill">6 Bites</span><p>A little bit of everything.</p><div class="nutrition"><span><b>420</b>kcal</span><span><b>18</b>g protein</span><span><b>14</b>g fat</span><span><b>9</b>g sugar</span></div><small>Created with Bite</small></article>
           </div>
-          <figure class="gallery-visual"><div class="device"><img src="assets/placeholders/gallery.svg" width="360" height="740" alt="Bissen-Galerie collectible gallery screenshot placeholder" loading="lazy"></div><figcaption>Your food.<br>Your gallery.</figcaption></figure>
+          <figure class="gallery-visual"><div class="device real-device"><img src="assets/gallery.png" width="2048" height="2560" alt="Bite recipe gallery with saved meals and cooking shortcuts" loading="lazy"></div><figcaption>Your food.<br>Your gallery.</figcaption></figure>
         </div>
       </div>
     </section>

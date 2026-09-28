@@ -1,19 +1,9 @@
-# Replaceable Bite images
+# Bite images
 
-These SVGs are explicitly labelled layout placeholders, not real app screenshots. Example meals and nutrition values are presentation content, not a nutrition database.
+The page uses the supplied PNG screenshots in `assets/`: `today.png`, `cooktimer.png`, `recommendation.png`, `receiptDetail.png`, `pizzarecipt.png`, and `gallery.png`. They include device frames and transparent margins; `.real-device` crops those margins without adding another frame.
 
-Replace the corresponding `img src` in `index.html` with your PNG/WebP image and update its alt text. Keep the image's width/height attributes in the same aspect ratio as the replacement. No JavaScript changes are needed.
+The health section uses the original responsive HTML cards and animated trend, with illustrative values. The supplied `Bodyspecs.png` is retained as an unused asset.
 
-| File | Slot | Suggested ratio |
-| --- | --- | --- |
-| `today.svg` | Main Today screenshot | 360 × 740 |
-| `cook.svg` | Hero and Cook Mode screenshot | 360 × 740 |
-| `editor.svg` | Meal editor screenshot | 360 × 740 |
-| `gallery.svg` | Bissen-Galerie screenshot | 360 × 740 |
-| `timer.svg` | Compact floating timer | 220 × 240 |
-| `meal.svg` | Recipe and collectible photographs | 400 × 320 |
-Body and health now uses individual responsive HTML cards in `index.html`, with illustrative values and an inline SVG trend. Update those cards directly; the original `health.svg` is no longer displayed.
+Only the collectible cards still use `meal.svg` as a photo placeholder. Replace their image sources and update the sample names and nutrition together when final collectible artwork is available. The remaining SVG mockups are unused.
 
-Screen images sit inside a CSS device frame; use captures without a device bezel. The shared meal placeholder has several independent `img` elements so each recipe can receive its own photograph. Update the adjacent sample names and nutrition to match the supplied content.
-
-The website is plain HTML/CSS/JS. Preview from the repository root with `python -m http.server 4173 --bind 127.0.0.1`, then visit http://127.0.0.1:4173. Run `node site.test.cjs` for the dependency-free interaction/content check.
+Preview from the repository root with `python -m http.server 4173 --bind 127.0.0.1`. Run `node site.test.cjs` for the interaction/content check.

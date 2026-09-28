@@ -50,3 +50,23 @@ deck.addEventListener('pointerup', (event) => {
   start = null;
 });
 deck.addEventListener('pointercancel', () => { start = null; });
+
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let pendingHealthCards = [...document.querySelectorAll('.health-card')];
+  pendingHealthCards.forEach(card => card.classList.add('reveal-ready'));
+  function revealHealthCards() {
+    pendingHealthCards = pendingHealthCards.filter(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top >= innerHeight * 0.9 || rect.bottom <= 0) return true;
+      card.classList.add('is-visible');
+      return false;
+    });
+    if (!pendingHealthCards.length) {
+      window.removeEventListener('scroll', revealHealthCards);
+      window.removeEventListener('resize', revealHealthCards);
+    }
+  }
+  window.addEventListener('scroll', revealHealthCards, { passive: true });
+  window.addEventListener('resize', revealHealthCards);
+  revealHealthCards();
+}

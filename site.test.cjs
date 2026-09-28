@@ -21,9 +21,9 @@ const status = {};
 const buttons = [-1, 1].map(step => element({ dataset: { deckStep: step } }));
 const document = element({
   querySelector: selector => ({ '.mobile-menu': menu, '.deck': deck, '.deck-status': status })[selector],
-  querySelectorAll: () => buttons,
+  querySelectorAll: selector => selector === '[data-deck-step]' ? buttons : [],
 });
-vm.runInNewContext(fs.readFileSync(path.join(__dirname, 'site.js'), 'utf8'), { document });
+vm.runInNewContext(fs.readFileSync(path.join(__dirname, 'site.js'), 'utf8'), { document, matchMedia: () => ({ matches: true }) });
 const checkCard = index => {
   assert.equal(cards[index].dataset.position, 0);
   assert.equal(cards.filter(card => card['aria-hidden'] === 'false').length, 1);
@@ -48,6 +48,24 @@ menu.open = true;
 document.listeners.click({ target: {} });
 assert.equal(menu.open, false);
 
+// Entrance effects reveal each card once; reduced motion leaves content visible.
+let cardTop = 1000;
+const healthCard = { classList: new Set(), getBoundingClientRect: () => ({ top: cardTop, bottom: cardTop + 200 }) };
+const healthDocument = { ...document, querySelectorAll: selector => selector === '.health-card' ? [healthCard] : buttons };
+const scrollWindow = element({ removeEventListener(type) { delete this.listeners[type]; } });
+const script = fs.readFileSync(path.join(__dirname, 'site.js'), 'utf8');
+vm.runInNewContext(script, { document: healthDocument, window: scrollWindow, innerHeight: 800, matchMedia: () => ({ matches: false }) });
+assert.ok(healthCard.classList.has('reveal-ready'));
+assert.ok(!healthCard.classList.has('is-visible'));
+cardTop = 500;
+scrollWindow.listeners.scroll();
+assert.ok(healthCard.classList.has('is-visible'));
+assert.equal(scrollWindow.listeners.scroll, undefined);
+assert.equal(scrollWindow.listeners.resize, undefined);
+healthCard.classList.clear();
+vm.runInNewContext(script, { document: healthDocument, matchMedia: () => ({ matches: true }) });
+assert.equal(healthCard.classList.size, 0);
+
 const html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, 'IDs must be unique');
@@ -58,4 +76,4 @@ for (const [, attribute, value] of html.matchAll(/\b(src|href)="([^"]+)"/g)) {
 assert.ok(html.includes('https://play.google.com/store/apps/details?id=com.avocadowitharms.bite'));
 assert.ok(html.includes('Voice control · Coming soon'));
 assert.ok(!/iPhone|apps\.apple\.com/.test(html));
-console.log('Passed: deck navigation, swipe/scroll/cancel, menu, local assets, anchors, Android link and coming-soon copy.');
+console.log('Passed: deck, menu, card entrance/reduced motion, local assets, anchors, Android link and coming-soon copy.');

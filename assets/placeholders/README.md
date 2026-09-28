@@ -12,7 +12,7 @@ Replace the corresponding `img src` in `index.html` with your PNG/WebP image and
 | `gallery.svg` | Bissen-Galerie screenshot | 360 × 740 |
 | `timer.svg` | Compact floating timer | 220 × 240 |
 | `meal.svg` | Recipe and collectible photographs | 400 × 320 |
-| `health.svg` | Body, weight trend and range UI fragments | 1200 × 290 |
+Body and health now uses individual responsive HTML cards in `index.html`, with illustrative values and an inline SVG trend. Update those cards directly; the original `health.svg` is no longer displayed.
 
 Screen images sit inside a CSS device frame; use captures without a device bezel. The shared meal placeholder has several independent `img` elements so each recipe can receive its own photograph. Update the adjacent sample names and nutrition to match the supplied content.
 

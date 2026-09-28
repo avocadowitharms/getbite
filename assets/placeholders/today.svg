@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="740" viewBox="0 0 360 740">
+<rect width="360" height="740" fill="#f4f4f1"/>
+<g font-family="Arial, sans-serif" fill="#151613"><text x="27" y="28" font-size="12" font-weight="600">9:41</text><circle cx="180" cy="19" r="5" fill="#161714"/><path d="M300 21v-4m5 4v-7m5 7V11" stroke="#151613" stroke-width="3"/><rect x="319" y="12" width="17" height="9" rx="2" fill="none" stroke="#151613"/>
+<path d="M24 68h18m-18 6h18m-18 6h18" stroke="#151613" stroke-width="1.5"/><circle cx="325" cy="67" r="4" fill="none" stroke="#151613"/><path d="M317 80c0-10 16-10 16 0" fill="none" stroke="#151613"/>
+<rect x="15" y="105" width="330" height="553" rx="28" fill="#fff"/><rect x="32" y="128" width="103" height="24" rx="12" fill="#eeeFEB"/><text x="44" y="144" font-size="9" font-weight="600">IN YOUR RANGE</text>
+<g fill="none" stroke="#32332e"><ellipse cx="180" cy="239" rx="91" ry="51" stroke-width="1.4"/><ellipse cx="180" cy="236" rx="85" ry="45" stroke="#c6c7bf"/><ellipse cx="180" cy="235" rx="72" ry="35" stroke="#c6c7bf"/></g>
+<text x="180" y="233" font-size="10" text-anchor="middle" fill="#72736d" letter-spacing="2">TODAY SCREEN</text><text x="180" y="249" font-size="8" text-anchor="middle" fill="#72736d" letter-spacing="1">IMAGE PLACEHOLDER</text>
+<text x="34" y="350" font-size="52" font-weight="700" letter-spacing="-3">23</text><text x="35" y="376" font-size="14" fill="#676860">Bites today</text>
+<rect x="33" y="399" width="137" height="31" rx="15" fill="#f0f0ed"/><rect x="35" y="401" width="57" height="27" rx="14" fill="#fff"/><text x="50" y="419" font-size="11">Bites</text><text x="106" y="419" font-size="11" fill="#666760">Calories</text>
+<path d="M35 468h288" stroke="#dedfd9" stroke-width="6" stroke-linecap="round"/><path d="M220 468h44" stroke="#64ad64" stroke-width="6" stroke-linecap="round"/><circle cx="242" cy="468" r="6" fill="#161714" stroke="#fff" stroke-width="2"/>
+<text x="34" y="494" font-size="11" fill="#61625c">0</text><text x="288" y="494" font-size="11" fill="#61625c">30</text><text x="34" y="528" font-size="12" fill="#61625c">Daily range 21–25 Bites</text><path d="M34 550h292" stroke="#eeeee9"/>
+<text x="34" y="582" font-size="13" font-weight="600">Weekly flex</text><text x="160" y="582" font-size="11" fill="#676860">Room for real life</text><rect x="34" y="605" width="180" height="6" rx="3" fill="#dedfd9"/><rect x="34" y="605" width="116" height="6" rx="3" fill="#151613"/><path d="M244 617v-25m15 25v-36m15 36v-19m15 19v-31m15 31v-41" stroke="#22231e" stroke-width="6" stroke-linecap="round"/>
+<text x="180" y="697" font-size="9" text-anchor="middle" fill="#77786f" letter-spacing="1">TODAY · SCREENSHOT PLACEHOLDER</text><rect x="125" y="727" width="110" height="4" rx="2"/>
+</g></svg>

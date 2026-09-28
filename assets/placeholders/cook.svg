@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="740" viewBox="0 0 360 740">
+<rect width="360" height="740" fill="#181916"/>
+<g font-family="Arial, sans-serif" fill="#f8f8f5"><text x="27" y="28" font-size="12" font-weight="600">9:41</text><circle cx="180" cy="19" r="5" fill="#060705"/><path d="M300 21v-4m5 4v-7m5 7V11" stroke="#f8f8f5" stroke-width="3"/><rect x="319" y="12" width="17" height="9" rx="2" fill="none" stroke="#f8f8f5"/>
+<path d="m33 67-7 7 7 7" stroke="#f8f8f5" fill="none" stroke-width="1.5"/><text x="180" y="80" font-size="18" font-weight="600" text-anchor="middle">Cook Mode</text>
+<text x="180" y="131" font-size="11" text-anchor="middle" letter-spacing="2" fill="#babbb4">YOUR RECIPE, STEP BY STEP</text><text x="180" y="158" font-size="12" text-anchor="middle" fill="#babbb4">Step 2 / 4</text><path d="M30 181h300" stroke="#393b34" stroke-width="3"/><path d="M30 181h140" stroke="#f8f8f5" stroke-width="3"/>
+<text x="29" y="233" font-size="10" letter-spacing="2" fill="#babbb4">CURRENT STEP</text><text x="29" y="280" font-size="32" font-weight="600" letter-spacing="-1">A little guidance.</text><text x="29" y="318" font-size="32" font-weight="600" letter-spacing="-1">A good meal.</text>
+<rect x="29" y="353" width="260" height="6" rx="3" fill="#45473e"/><rect x="29" y="372" width="290" height="6" rx="3" fill="#45473e"/><rect x="29" y="391" width="197" height="6" rx="3" fill="#45473e"/>
+<rect x="25" y="427" width="310" height="128" rx="20" fill="#22241e" stroke="#42443b"/><text x="43" y="455" font-size="12">You’ll need</text><circle cx="49" cy="483" r="6" fill="none" stroke="#76786c"/><path d="M69 483h183" stroke="#45473e" stroke-width="5" stroke-linecap="round"/><circle cx="49" cy="519" r="6" fill="none" stroke="#76786c"/><path d="M69 519h142" stroke="#45473e" stroke-width="5" stroke-linecap="round"/>
+<text x="29" y="590" font-size="9" fill="#babbb4" letter-spacing="1.5">UP NEXT</text><path d="M29 611h210" stroke="#45473e" stroke-width="6" stroke-linecap="round"/>
+<circle cx="49" cy="659" r="20" fill="#2b2d26"/><path d="m52 653-6 6 6 6" fill="none" stroke="#fff"/><rect x="220" y="639" width="110" height="40" rx="20" fill="#eeefe8"/><text x="275" y="664" font-size="12" text-anchor="middle" fill="#181916">Next step →</text>
+<text x="180" y="710" font-size="9" text-anchor="middle" fill="#b1b3a8" letter-spacing="1">COOK MODE · IMAGE PLACEHOLDER</text><rect x="125" y="727" width="110" height="4" rx="2"/>
+</g></svg>

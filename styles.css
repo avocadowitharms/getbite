@@ -48,3 +48,6 @@ a{color:inherit;text-decoration:none}button,summary{-webkit-tap-highlight-color:
 @media(max-width:600px){.health-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:30px;padding:12px;border-radius:24px}.health-card{padding:20px;border-radius:16px}.health-weight,.health-trend,.health-target{grid-column:1 / -1}.health-bmi,.health-metabolism{grid-column:span 1}.health-card .eyebrow{font-size:8px;margin-bottom:18px}.health-value{font-size:46px}.health-goal{margin-top:25px}.health-trend svg{margin-top:25px}.health-bmi,.health-metabolism{padding:18px 14px}.health-bmi .health-value{font-size:34px}.health-metabolism dl{font-size:10px}.health-metabolism dl>div{gap:5px}.health-metabolism dd span{font-size:8px}.health-card .health-note{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.health-card.reveal-ready:not(.is-visible){opacity:1;transform:none}.health-card.reveal-ready:not(.is-visible) .trend-line{stroke-dashoffset:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+.wordmark{display:inline-flex;align-items:center;gap:5px}.brand-icon{width:48px;height:48px;object-fit:contain;flex:none}
+@media(max-width:600px){.brand-icon{width:40px;height:40px}}
